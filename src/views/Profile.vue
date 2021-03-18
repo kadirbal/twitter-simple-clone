@@ -1,7 +1,7 @@
 <template>
   <div class="profile">
     <div class="p-4 flex border-b items-center">
-      <button @click="$router.go(-1)">
+      <button @click="$router.go(-1)" class="focus:outline-none">
         <font-awesome-icon icon="arrow-left" class="text-xl text-blue-600" />
       </button>
       <div class="flex flex-col ml-4">
