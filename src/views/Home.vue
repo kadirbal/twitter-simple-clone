@@ -61,10 +61,7 @@ import Tweet from "../components/Tweet.vue";
 export default {
   components: { Tweet },
   name: "Home",
-  async created() {
-    await this.$store.dispatch("fetchUser");
-    await this.$store.dispatch("fetchUsers", { page: 1 });
-  },
+
   methods: {},
 };
 </script>

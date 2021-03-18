@@ -7,9 +7,7 @@
     <div class="tweet-content">
       <div class="user-info">
         <span>{{ tweet.first_name }} {{ tweet.last_name }}</span>
-        <span class="ml-1 text-gray-400"
-          >@{{ tweet.first_name[0] }}{{ tweet.last_name[0] }}</span
-        >
+        <span class="ml-1 text-gray-400">@{{ tweet.email.split("@")[0] }}</span>
         <span class="ml-1 text-gray-400">· 1d</span>
       </div>
       <p>

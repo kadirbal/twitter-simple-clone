@@ -7,10 +7,12 @@ import "./assets/css/tailwind.css";
 import { library } from "@fortawesome/fontawesome-svg-core";
 import {
   faAlignLeft,
+  faArrowLeft,
   faBell,
   faBookmark,
   faCalendar,
   faClipboardList,
+  faCog,
   faComment,
   faEllipsisH,
   faEnvelope,
@@ -51,7 +53,9 @@ library.add(
   faImages,
   faAlignLeft,
   faSmile,
-  faCalendar
+  faCalendar,
+  faCog,
+  faArrowLeft
 );
 
 Vue.component("font-awesome-icon", FontAwesomeIcon);

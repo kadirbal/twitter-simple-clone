@@ -11,6 +11,15 @@
       <li v-for="(item, i) in menu" :key="i">
         <nav-button :item="item" />
       </li>
+      <li>
+        <nav-button
+          :item="{
+            name: 'Profil',
+            icon: 'user',
+            to: `${$store.state.user.data.email.split('@')[0]}`,
+          }"
+        ></nav-button>
+      </li>
       <li class="mt-4">
         <!-- component yap -->
         <button
@@ -30,9 +39,7 @@
             "
           ></span>
           <span
-            v-html="
-              `@${$store.state.user.data.first_name[0]}${$store.state.user.data.last_name[0]}`
-            "
+            v-html="`@${$store.state.user.data.email.split('@')[0]}`"
           ></span>
         </div>
       </div>
@@ -54,7 +61,7 @@ export default {
       { name: "Mesajlar", to: "/messages", icon: "envelope" },
       { name: "Yer İşaretleri", to: "/bookmarks", icon: "bookmark" },
       { name: "Listeler", to: "/lists", icon: "clipboard-list" },
-      { name: "Profil", to: "/profile", icon: "user" },
+      // { name: "Profil", to: "/profile", icon: "user" },
     ],
   }),
 };
