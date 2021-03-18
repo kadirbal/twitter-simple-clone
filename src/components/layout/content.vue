@@ -12,6 +12,6 @@ export default {
 
 <style lang="postcss">
 .content {
-  @apply w-full px-4;
+  width: 598px;
 }
 </style>

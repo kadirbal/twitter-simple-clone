@@ -19,10 +19,18 @@
     </ul>
     <div class="nav-user-card">
       <div class="flex items-center">
-        <img :src="$store.state.user.pp" />
+        <img :src="$store.state.user.data.avatar" />
         <div class="username">
-          <span v-html="$store.state.user.name"></span>
-          <span v-html="`@${$store.state.user.username}`"></span>
+          <span
+            v-html="
+              `${$store.state.user.data.first_name} ${$store.state.user.data.last_name}`
+            "
+          ></span>
+          <span
+            v-html="
+              `@${$store.state.user.data.first_name[0]}${$store.state.user.data.last_name[0]}`
+            "
+          ></span>
         </div>
       </div>
       <font-awesome-icon icon="ellipsis-h" />
@@ -51,7 +59,8 @@ export default {
 
 <style lang="postcss">
 .left {
-  @apply flex w-1/5 h-screen px-3 sticky top-0 border-r flex-col justify-between;
+  width: 275px;
+  @apply flex h-screen px-3 sticky top-0 border-r  flex-col justify-between;
 }
 
 .nav-user-card {

@@ -18,6 +18,6 @@ export default {
 
 <style lang="postcss">
 .layout {
-  @apply container mx-auto flex;
+  @apply w-min mx-auto flex;
 }
 </style>

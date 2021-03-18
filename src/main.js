@@ -9,18 +9,23 @@ import {
   faBell,
   faBookmark,
   faClipboardList,
+  faComment,
   faEllipsisH,
   faEnvelope,
   faHashtag,
+  faHeart,
   faHome,
+  faRetweet,
+  faSearch,
+  faShareSquare,
   faUser,
 } from "@fortawesome/free-solid-svg-icons";
+
 import { faTwitter } from "@fortawesome/free-brands-svg-icons";
 
 import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
 
 library.add(
-  faTwitter,
   faHashtag,
   faBell,
   faEnvelope,
@@ -28,7 +33,13 @@ library.add(
   faClipboardList,
   faUser,
   faEllipsisH,
-  faHome
+  faHome,
+  faRetweet,
+  faHeart,
+  faShareSquare,
+  faComment,
+  faTwitter,
+  faSearch
 );
 
 Vue.component("font-awesome-icon", FontAwesomeIcon);

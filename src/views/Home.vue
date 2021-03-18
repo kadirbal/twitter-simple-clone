@@ -1,12 +1,32 @@
 <template>
-  <div class="layout">
-    <p class="text-white">lorem*100</p>
+  <div class="home">
+    <tweet
+      v-for="(item, i) in $store.state.users.data"
+      :tweet="item"
+      :key="i"
+    />
+    <tweet
+      v-for="(item, i) in $store.state.users.data"
+      :tweet="item"
+      :key="i"
+    />
+    <!-- <tweet
+      v-for="(item, i) in $store.state.users.data"
+      :tweet="item"
+      :key="i"
+    /> -->
   </div>
 </template>
 
 <script>
+import Tweet from "../components/Tweet.vue";
 export default {
+  components: { Tweet },
   name: "Home",
-  components: {},
+  async created() {
+    await this.$store.dispatch("fetchUser");
+    await this.$store.dispatch("fetchUsers", { page: 1 });
+  },
+  methods: {},
 };
 </script>

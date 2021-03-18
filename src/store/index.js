@@ -5,14 +5,25 @@ Vue.use(Vuex);
 
 export default new Vuex.Store({
   state: {
-    user: {
-      name: "Kadir 'Red' Reddington",
-      pp:
-        "https://pbs.twimg.com/profile_images/1340944081078407168/KlXYpeip_400x400.jpg",
-      username: "k0nst4nt1n3",
+    user: {},
+    users: [],
+  },
+  mutations: {
+    SET_USERS: (state, users) => (state.users = users),
+    SET_USER: (state, user) => (state.user = user),
+  },
+  actions: {
+    async fetchUser({ commit }) {
+      const user = await (await fetch("https://reqres.in/api/users/2")).json();
+      commit("SET_USER", user);
+    },
+    async fetchUsers({ commit }, { page }) {
+      const users = await (
+        await fetch(`https://reqres.in/api/users?page=${page}`)
+      ).json();
+
+      commit("SET_USERS", users);
     },
   },
-  mutations: {},
-  actions: {},
   modules: {},
 });
