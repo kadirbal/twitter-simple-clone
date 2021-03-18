@@ -12,7 +12,45 @@ const routes = [
         path: "",
         name: "Home",
         component: () =>
-          import(/* webpackChunkName: "about" */ "../views/Home.vue"),
+          import(/* webpackChunkName: "home" */ "../views/Home.vue"),
+      },
+      {
+        path: "explore",
+        name: "Explore",
+        component: () =>
+          import(/* webpackChunkName: "home" */ "../views/Explore.vue"),
+      },
+      {
+        path: "notifications",
+        name: "Notifications",
+        component: () =>
+          import(
+            /* webpackChunkName: "notifications" */ "../views/Notifications.vue"
+          ),
+      },
+      {
+        path: "messages",
+        name: "Messages",
+        component: () =>
+          import(/* webpackChunkName: "messages" */ "../views/Messages.vue"),
+      },
+      {
+        path: "bookmarks",
+        name: "Bookmarks",
+        component: () =>
+          import(/* webpackChunkName: "bookmarks" */ "../views/Bookmarks.vue"),
+      },
+      {
+        path: "lists",
+        name: "Lists",
+        component: () =>
+          import(/* webpackChunkName: "lists" */ "../views/Lists.vue"),
+      },
+      {
+        path: ":username",
+        name: "Profile",
+        component: () =>
+          import(/* webpackChunkName: "profile" */ "../views/Profile.vue"),
       },
     ],
   },

@@ -1,6 +1,6 @@
 <template>
   <div class="layout">
-    <p class="text-white">lorem*100</p>
+    <p class="text-white">hello world</p>
   </div>
 </template>
 
