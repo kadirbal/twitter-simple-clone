@@ -3,7 +3,7 @@
     <ul>
       <li>
         <button
-          class="text-xl font-bold p-3 my-2 outline-none hover:bg-blue-400 bg-opacity-40 rounded-full"
+          class="text-xl font-bold p-3 my-2 outline-none hover:bg-blue-600 bg-opacity-40 rounded-full"
         >
           <font-awesome-icon :icon="['fab', 'twitter']" />
         </button>
@@ -12,7 +12,10 @@
         <nav-button :item="item" />
       </li>
       <li class="mt-4">
-        <button class="w-full bg-blue-500 py-2 rounded-full focus:outline-none">
+        <!-- component yap -->
+        <button
+          class="w-full bg-blue-600 py-3 rounded-full focus:outline-none font-bold"
+        >
           Tweet
         </button>
       </li>
@@ -66,7 +69,7 @@ export default {
 .nav-user-card {
   @apply flex p-3 my-2 rounded-full items-center justify-between;
   &:hover {
-    @apply bg-blue-400 opacity-40;
+    @apply bg-blue-600 opacity-40;
   }
   .username {
     @apply flex flex-col ml-2 w-12;
